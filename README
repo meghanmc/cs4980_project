@@ -1,0 +1,25 @@
+Authors: Meghan McLaughlin && Matthew Haferbier
+
+File Descriptions:
+
+gather_script.py:
+
+The gather_script.py file was used to gather all of our transactions from 11-12-18 to 11-18-18. Every 30 seconds, it pulls the
+JSON code from the Venmo Public API, which includes 20 transactions, and writes it to a JSON file. In total this created around 
+20,000 individual files. We then merged all of these files together into one file, called merged_filebig.JSON.
+
+merged_filebig.JSON:
+
+This file contains around 397,000 transactions from 11-12-18 to 11-18-18, and can be found on outlook where we sent it to you. 
+It was too big to upload onto github
+
+analyze_script.py:
+
+This is the file which contains all of our Python analysis scripts. We were able to run this file over merged_filebig.JSON on IDLE. 
+To run it on your machine, there may be issues with the libraries according to which version of Python you are running or your OS.
+If the libraries load in fine, then just put analyze_script.py and merged_filebig.JSON in the same directory, and run analyze_script.py 
+in your IDE of choice. (We used IDLE). Running it should cause no memory issues, and afterwards you can see some of the results we 
+recieved printed on the IDE, or you can call the variables where we saved the results. So for example, if you wanted to see the top
+hundred Emojis unicodes, just enter in topHundredEmojis into the IDE. If you want to find a certain day, then topHundredEmojisSat etc.
+
+We took the data this returned and placed it into Excel to make graphs and analyze data easier.
